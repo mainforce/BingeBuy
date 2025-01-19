@@ -1,0 +1,141 @@
+.order-info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) 75px 75px; /* Första kolumnen är flexibel, de andra två är 75px */
+  order: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.9rem;
+  margin-top: 1rem;
+
+  h2 {
+    grid-column: span 3;
+    padding: 0.6rem;
+    justify-content: flex-start;
+  }
+
+  h3 {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: left;
+    font-size: $largest-fontsize;
+    padding-left: 8px;
+    margin-top: 12px;
+    margin-bottom: -5px;
+  }
+
+  .summary {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 2px 8px 2px 8px;
+    margin-top: 0.5rem;
+
+    .product-name {
+      grid-column: 1/2;
+      margin-right: 10px;
+
+      .lighter {
+        margin-right: 10px;
+        font-weight: 100;
+        font-size: 14px;
+      }
+    }
+
+    .product-price {
+      grid-column: 2/3;
+      text-align: right;
+      color: $secondary-color;
+    }
+  }
+
+  .discount-box {
+    grid-column: span 4;
+    max-width: 500px;
+    margin: 2rem 1rem 1rem 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    font-size: 14px;
+    color: black;
+
+    h6 {
+      font-size: 1.2rem;
+      color: lightgreen;
+    }
+
+    .discount {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+  }
+
+  .total-shipping {
+    margin-top: 1rem;
+    grid-column: 2 / 4;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: auto;
+    width: 100%;
+    padding: 8px;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+
+      h5 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .edit-shipping {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0px 8px 2px 8px;
+
+    button {
+      margin-top: 10px;
+    }
+    h4 {
+      color: black;
+      font-size: 1.1rem;
+      max-width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+.edit-cart {
+  width: auto;
+  max-width: 200px;
+  background-color: white;
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 1.4rem;
+  padding: 0 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 460px) {
+  .order-info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) 100px 100px;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .edit-shipping {
+    margin-right: -14px;
+
+    h4 {
+      min-width: 200px;
+    }
+  }
+}

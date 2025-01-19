@@ -1,0 +1,113 @@
+.cart {
+  .discount-box {
+    grid-column: span 4;
+    max-width: 500px;
+    margin: 2rem 1rem 1rem 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    font-size: 14px;
+    color: black;
+
+    h6 {
+      font-size: 1.2rem;
+      color: lightgreen;
+    }
+
+    .discount {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+  }
+
+  .empty-cart {
+    display: flex;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: rgb(247, 244, 244);
+    padding: 0 1rem;
+    border-radius: 10px;
+  }
+
+  .cart-item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cart-item-info {
+    flex: 1;
+    padding-right: 15px;
+  }
+
+  .cart-item-name,
+  .cart-item-amount,
+  .cart-item-price {
+    font-family: $main-font;
+    font-size: 1rem;
+  }
+
+  .cart-item-name {
+    font-family: $secondary-font;
+    font-size: $large-fontsize;
+    font-weight: 100;
+  }
+
+  .thumb-img img {
+    border-radius: 3px;
+    margin: 0.5rem 0;
+    padding-top: 5px;
+    width: auto;
+    max-height: 100px;
+    object-fit: cover;
+  }
+
+  .cart-total {
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem 0px;
+    background-color: rgb(247, 244, 244);
+    border-radius: 10px;
+
+    .summary {
+      display: flex;
+      flex-direction: column;
+
+      .cart-sum {
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h4 {
+        font-family: $secondary-font;
+        font-size: $large-fontsize;
+        font-weight: 100;
+      }
+
+      span {
+        text-align: right;
+        margin-left: 10px;
+        font-family: $secondary-font;
+        font-size: $large-fontsize;
+        font-weight: 100;
+      }
+
+      .total-cart {
+        padding-top: 1rem;
+      }
+    }
+  }
+}
