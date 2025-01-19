@@ -1108,7 +1108,7 @@ invoice.addEventListener("click", () => {
   insertCard.style.display = "none";
 });
 
-// Validates Invoice (if chosen as option)
+// Validates Invoice (if chosen as option) //
 function validateInvoice() {
   const personalID = form.querySelector("#personal-id");
   if (personalID.checkValidity()) {
